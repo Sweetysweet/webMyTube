@@ -1,0 +1,155 @@
+mixinHeader()
+
+.header
+    display flex
+    justify-content space-between
+    margin 0 auto
+    width 100%
+    max-width 100%
+    box-shadow none
+    height 56px
+    overflow hidden
+    z-index 10
+    align-items center
+    .logo
+        width 80px
+        height 38px
+        cursor pointer
+    .logo-svg
+        width 100%
+        height 100%
+    .logo-academy
+        display block
+        cursor pointer
+        margin auto
+    .search
+        display flex
+        flex-grow 1
+        padding 0 10px
+    .search-form
+        display flex
+        width 100%
+        max-width 640px
+        margin 0 auto
+        position relative
+        align-items center
+        background-color white
+        border 1px solid #ccc
+        border-right none
+        border-radius 2px 0 0 2px
+        box-shadow inset 0 1px 2px #eee
+        color #111
+    .search-form__wrap
+        display flex
+        flex-grow 1
+        padding 2px 6px
+        height 30px
+        align-items center
+    .search-form__label
+        width 100%
+    .search-form__input
+        width 100%
+        border none
+        padding 0
+        margin 0
+        height auto
+        outline none
+    .search-form__btn
+        display flex
+        justify-content center
+        cursor pointer
+        width 65px
+        height 100%
+        border 1px solid #d3d3d3
+        background-color #f8f8f8
+        border-radius 0 2px 2px 0
+        margin 0
+        align-items center
+        &:hover
+            border-color #c6c6c6
+            background-color #f0f0f0
+            box-shadow 0 1px 0 rgba(0, 0, 0, 0.1)
+        &:hover-loupe
+            opacity 1
+    .search-form__btn-loupe
+        pointer-events none
+        display block
+        width 20px
+        height 20px
+        opacity 0.6
+    .search-form__keyboard
+        cursor pointer
+    .spinner
+        box-sizing border-box
+        cursor pointer
+        z-index 99
+        height 14px
+        width 18px
+        margin 14px 27px
+        .horizontal
+            transition all 0.3s
+            box-sizing border-box
+            position relative
+            float left
+            margin-top 3px
+        .diagonal
+            &.part-1
+                position relative
+                transition all 0.3s
+                box-sizing border-box
+                float left
+            &.part-2
+                transition all 0.3s
+                box-sizing border-box
+                position relative
+                float left
+                margin-top 3px
+        &.active
+            & > .horizontal
+                transition all 0.3s
+                box-sizing border-box
+                opacity 0
+                margin-top 0
+            & > .diagonal
+                &.part-1
+                    transition all 0.3s
+                    box-sizing border-box
+                    transform rotate(135deg)
+                    margin-top 6px
+                &.part-2
+                    transition all 0.3s
+                    box-sizing border-box
+                    transform rotate(-135deg)
+                    margin-top -4px
+    .spinner-line
+        transition all 0.3s
+        box-sizing border-box
+        position absolute
+        height 2px
+        width 18px
+        background-color #000
+
+.header-left
+    display flex
+
+@media (max-width: 576px)
+    .header
+        .logo
+            padding 5px
+
+.header-right
+    display flex
+    width 250px
+    height 100%
+
+@media (max-width: 576px)
+    .header
+        .search-form__keyboard
+            display none
+
+@media (max-width: 576px)
+    .header
+        .spinner
+            display none
+
+mixinHeader()

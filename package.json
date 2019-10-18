@@ -1,0 +1,51 @@
+{
+  "name": "newproject",
+  "version": "1.0.0",
+  "description": "zero template for pinkman web projects",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/runtime": "^7.1.2",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.4",
+    "object-fit-images": "^3.2.4",
+    "stickyfilljs": "^2.1.0",
+    "throttle-debounce": "^2.0.1",
+    "object-fit-videos": "^1.0.4",
+    "smoothscroll-polyfill": "^0.4.3",
+    "vue": "^2.5.17",
+    "vuex": "^3.0.1",
+    "webpack": "^4.29.5"
+  },
+  "devDependencies": {
+    "emitty": "^1.4.1",
+    "eslint": "^5.8.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-wait": "0.0.2",
+    "natives": "^1.1.6",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack-bundle-analyzer": "^3.0.3"
+  },
+  "scripts": {
+    "dev": "tars dev -l",
+    "comp": "tars add-component -s component",
+    "page": "tars add-page",
+    "api": "cd mockapi && npm run api"
+  },
+  "author": "Pinkman",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.pink-code.ru:pinkman-public/zero.git"
+  }
+}

@@ -1,0 +1,19 @@
+//- pageTitle: Страница не найдена
+//- pageCategory: Страницы
+//- date: 12.12.2018
+//- status: done
+
+extends ../layouts/layout.pug
+
+include ../components/page-404/page-404.pug
+
+append vars
+  -
+    setDefs({
+      pageTitle: 'Страница не найдена',
+      menuActiveIndex: 3,
+      pageClass: 'page--404'
+    })
+
+block content
+  +page-404()

@@ -1,0 +1,10 @@
+FROM node:9.11.1-alpine
+WORKDIR /
+
+COPY ./mockapi/package*.json ./
+RUN npm install
+
+COPY ./mockapi/ ./
+
+EXPOSE 3000
+CMD [ "npm", "run", "api" ]

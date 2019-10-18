@@ -1,0 +1,48 @@
+variables:
+  IMG_TAG: $CI_PROJECT_NAMESPACE-$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME
+
+stages:
+  - pull_code
+  - build_code
+  - run_server
+
+delivery_job:
+  stage: pull_code
+  tags:
+    - stage
+  only:
+    refs:
+      - stage
+
+  before_script:
+    - cd /data/$CI_PROJECT_NAME
+  script:
+    - git fetch && git checkout $CI_COMMIT_REF_NAME && git pull origin $CI_COMMIT_REF_NAME
+
+build_code_job:
+  stage: build_code
+  tags:
+    - stage
+  only:
+    refs:
+      - stage
+  before_script:
+    - cd /data/$CI_PROJECT_NAME
+  script:
+    - docker build . --tag $IMG_TAG:$CI_PIPELINE_ID
+    - docker rmi -f $(docker images -q --filter label=stage=intermediate)
+
+run_server_job:
+  stage: run_server
+  tags:
+    - stage
+  only:
+    refs:
+      - stage
+
+
+  before_script:
+    - cd /data/$CI_PROJECT_NAME
+    - STOP=`docker ps | grep $IMG_TAG | awk {'print $1'}` && docker stop $STOP
+  script:
+    - docker run -d --name $CI_PIPELINE_ID-$CI_PROJECT_NAME -p $PORT:3000 $IMG_TAG:$CI_PIPELINE_ID

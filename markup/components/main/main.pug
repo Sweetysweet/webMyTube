@@ -1,0 +1,273 @@
+mixin main(data={})
+  -
+  .wrapper
+    .sidebarMenu
+        ul
+          li#yt_main.active
+            a(href='index.html')
+              svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 24 24')
+                path(d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8')
+              span#main Главная
+          li#yt_trend
+            a(href='#')
+              svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 24 24')
+                path(d='M17.53 11.2c-.23-.3-.5-.56-.76-.82-.65-.6-1.4-1.03-2.03-1.66-1.46-1.46-1.78-3.87-.85-5.72-.9.23-1.75.75-2.45 1.32C8.9 6.4 7.9 10.07 9.1 13.22c.04.1.08.2.08.33 0 .22-.15.42-.35.5-.22.1-.46.04-.64-.12-.06-.05-.1-.1-.15-.17-1.1-1.43-1.28-3.48-.53-5.12C5.87 10 5 12.3 5.12 14.47c.04.5.1 1 .27 1.5.14.6.4 1.2.72 1.73 1.04 1.73 2.87 2.97 4.84 3.22 2.1.27 4.35-.12 5.96-1.6 1.8-1.66 2.45-4.3 1.5-6.6l-.13-.26c-.2-.45-.47-.87-.78-1.25zm-3.1 6.3c-.28.24-.73.5-1.08.6-1.1.38-2.2-.16-2.88-.82 1.2-.28 1.9-1.16 2.1-2.05.17-.8-.14-1.46-.27-2.23-.12-.74-.1-1.37.2-2.06.15.38.35.76.58 1.06.76 1 1.95 1.44 2.2 2.8.04.14.06.28.06.43.03.82-.32 1.72-.92 2.26z')
+              span#in_trend В тренде
+          li#yt_subscriptions
+            a(href='#')
+              svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 24 24')
+                path(d='M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z')
+              span#subscriptions Подписки
+          li#yt_like
+            a(href='#')
+              svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 24 24')
+                path.style-scope.yt-icon(d='M3.75 18.75h3v-9h-3v9zm16.5-8.25c0-.83-.68-1.5-1.5-1.5h-4.73l.7-3.43.03-.24c0-.3-.13-.6-.33-.8l-.8-.78L8.7 8.7c-.3.26-.45.64-.45 1.05v7.5c0 .82.67 1.5 1.5 1.5h6.75c.62 0 1.15-.38 1.38-.9l2.27-5.3c.06-.18.1-.36.1-.55v-1.5z')
+              span#like Понравившиеся
+    .container
+        #yt-wrapper.row
+          .yt(data-youtuber='B7rZxLzSAOM')
+            .yt-thumbnail(style='--aspect-ratio:16/9;')
+              img.yt-thumbnail__img(src='%=static=%/img/content/001.jpg', alt='thumbnail')
+            .yt-title Как я стал фрилансером веб-разработчиком
+            .yt-channel Glo Academy —  HTML, CSS и JS
+          .yt(data-youtuber='NF6DV-S9DEE')
+            .yt-thumbnail(style='--aspect-ratio:16/9;')
+              img.yt-thumbnail__img(src='%=static=%/img/content/002.jpg', alt='thumbnail')
+            .yt-title Способы перебора массивов в JavaScript | Часть 2 | Уроки JavaScript
+            .yt-channel Glo Academy —  HTML, CSS и JS
+          .yt(data-youtuber='NtcgznHOBlc')
+            .yt-thumbnail(style='--aspect-ratio:16/9;')
+              img.yt-thumbnail__img(src='%=static=%/img/content/003.jpg', alt='thumbnail')
+            .yt-title Способы перебора массивов в JavaScript | Часть 1 | Уроки JavaScript
+            .yt-channel Glo Academy — HTML, CSS и JS
+          .yt(data-youtuber='c5--bmtCCVo')
+            .yt-thumbnail(style='--aspect-ratio:16/9;')
+              img.yt-thumbnail__img(src='%=static=%/img/content/004.jpg', alt='thumbnail')
+            .yt-title Открытый урок с курса JS 9.0 - Слайдер карусель
+            .yt-channel Glo Academy — HTML, CSS и JS
+          .yt(data-youtuber='amrIqeOXQW0')
+            .yt-thumbnail(style='--aspect-ratio:16/9;')
+              img.yt-thumbnail__img(src='%=static=%/img/content/005.jpg', alt='thumbnail')
+            .yt-title JS-фичи #4 | Круглый прогрессбар на JavaScript | Circle progress bar
+            .yt-channel Glo Academy — HTML, CSS и JS
+          .yt(data-youtuber='VpM4kAwuJTY')
+            .yt-thumbnail(style='--aspect-ratio:16/9;')
+              img.yt-thumbnail__img(src='%=static=%/img/content/006.jpg', alt='thumbnail')
+            .yt-title JavaScript фичи #3 | Прогресс бар при прокрутке страницы | JS
+            .yt-channel Glo Academy — HTML, CSS и JS
+          .yt(data-youtuber='__Kavgr47F8')
+            .yt-thumbnail(style='--aspect-ratio:16/9;')
+              img.yt-thumbnail__img(src='%=static=%/img/content/007.jpg', alt='thumbnail')
+            .yt-title JavaScript фичи #2 Parallax на чистом JS | Параллакс эффект
+            .yt-channel Glo Academy — HTML, CSS и JS
+          .yt(data-youtuber='DqfgJDtDIcg')
+            .yt-thumbnail(style='--aspect-ratio:16/9;')
+              img.yt-thumbnail__img(src='%=static=%/img/content/008.jpg', alt='thumbnail')
+            .yt-title JavaScript фичи #1 | 3D карточки с наведением | JS фичи
+            .yt-channel Glo Academy — HTML, CSS и JS
+        button#next_result(style='display: none') Далее   
+    
+    .keyboard
+      .keyboard-wrapper(style='width: 495px; user-select: none; left: 629px; top: 231px;' tabindex='-1')
+        table(style='margin: 0; padding: 0; user-select: none;')
+          tbody(style='user-select: none;')
+            tr(style='user-select: none;')
+              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                div(dir='ltr' style='width: 100%; user-select: none;')
+                  div(style='text-align: left; user-select: none; display: flex; justify-content: space-between;')
+                    span Русская клавиатура
+                    span#close-keyboard(style='cursor: pointer') X
+                  div(style='right: 0; padding-right: 14px; user-select: none;')
+                    div(style='user-select: none;')
+            tr(style='user-select: none;')
+              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                table(dir='ltr' style='margin: 0; padding: 0; direction: ltr; user-select: none; display: block;')
+                  tbody(style='user-select: none;')
+                    tr(style='user-select: none;')
+                      td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                        table(style='margin: 0; padding: 0; user-select: none;')
+                          tbody(style='user-select: none;')
+                            tr(style='user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ё
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 1
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 2
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 3
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 4
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 5
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 6
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 7
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 8
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 9
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | 0
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | -
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | =
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button#keyboard-backspace(style='margin: 2px; width: 62px; height: 29px; user-select: none;')
+                                  | del
+                    tr(style='user-select: none;')
+                      td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                        table(style='margin: 0; padding: 0; user-select: none;')
+                          tbody(style='user-select: none;')
+                            tr(style='user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 45px; height: 29px; visibility: hidden; user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | й
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ц
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | у
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | к
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | е
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | н
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | г
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ш
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | щ
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | з
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | х
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ъ
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 45px; height: 29px; visibility: hidden; user-select: none;')
+                    tr(style='user-select: none;')
+                      td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                        table(style='margin: 0; padding: 0; user-select: none;')
+                          tbody(style='user-select: none;')
+                            tr(style='user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 54px; height: 29px; visibility: hidden ;user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ф
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ы
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | в
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | а
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | п
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | р
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | о
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | л
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | д
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ж
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | э
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 70px; height: 29px; visibility: hidden; user-select: none;')
+                    tr(style='user-select: none;')
+                      td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                        table(style='margin: 0; padding: 0; user-select: none;')
+                          tbody(style='user-select: none;')
+                            tr(style='user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 70px; height: 29px; visibility: hidden; user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | я
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ч
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | с
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | м
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | и
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | т
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ь
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | б
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | ю
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 29px; height: 29px; user-select: none;')
+                                  | .
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 87px; height: 29px; visibility: hidden; user-select: none;')
+                    tr(style='user-select: none;')
+                      td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                        table(style='margin: 0; padding: 0; user-select: none;')
+                          tbody(style='user-select: none;')
+                            tr(style='user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 95px; height: 29px; user-select: none;') en
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 293px; height: 29px; user-select: none;')
+                              td(style='margin: 0; padding: 0; border: 0 none; user-select: none;')
+                                button(style='margin: 2px; width: 95px; height: 29px; user-select: none; visibility: hidden')
+    .auth 
+      .auth_wrap
+        button#authorize Войти
+

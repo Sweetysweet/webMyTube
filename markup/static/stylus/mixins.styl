@@ -1,0 +1,137 @@
+// Mixins.
+font-face($font-name, $file-path, $weight = 'normal', $style = 'normal')
+
+  $url  = 'url("' + $file-path + '.woff2") format("woff2"), '
+  $url = $url + 'url("' + $file-path + '.woff") format("woff")'
+
+  @font-face
+    font-family $font-name
+    src unquote($url)
+    font-weight unquote($weight)
+    font-style unquote($style)
+
+
+font($font-name, $font-weight, $font-size, $line-height = 'normal')
+  font-family $font-name
+  font-weight $font-weight
+  font-size unquote($font-size)
+  line-height unquote($line-height)
+
+list($position='outside')
+  margin 0
+  padding 0
+  text-indent 0
+  list-style none
+  list-style-position $position  //- outside/inside
+
+// You can add your own mixins here:
+
+
+fullsize($position = 'absolute')
+  position $position
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+
+bgi(size)
+  background-position 50% 50%
+  background-size size
+  background-repeat no-repeat
+
+square(size)
+  width size
+  height size
+
+center()
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  margin auto
+
+pseudo($content='')
+  content $content
+  position absolute
+  display block
+
+
+obj-fit()  //- IE stuff
+  object-fit cover
+  object-position top
+  font-family 'object-fit: cover; object-position: top;'
+  width 100%
+  display block
+
+
+//- сдвигает full-width блок в правый край экрана на любом разрешении (в каждом медиа должен быть свой размер контейнера)
+fullWidth(contentWidth)
+    width 100vw
+    right 'calc((100vw - %s) / 2 * -1)' % contentWidth
+
+//- сдвигает full-width блок в левый край экрана
+fullWidthLeft(contentWidth)
+    width 100vw
+    left 'calc((100vw - %s) / 2 * -1)' % contentWidth
+
+anim-bounce()
+  @keyframes bounce
+    from
+      transform scale(0)
+
+    to
+      transform scale(1.01)
+
+  animation bounce 1.2s cubic-bezier(.71,.02,.46,.95) 1 .2s
+  animation-fill-mode backwards
+
+anim-bubble()
+  @keyframes bubble
+    0%
+      transform scale(0)
+
+    70%
+      transform scale(0)
+
+    100%
+      transform scale(1.02)
+
+  // animation bubble 1s cubic-bezier(.8,2.41,.26,.1) 1 .7s
+  // animation-fill-mode backwards
+  animation bubble 1.4s cubic-bezier(.92,2.21,0.29,.67) 1 .05s
+  animation-fill-mode backwards
+
+
+.bubble
+  &.animated
+    anim-bubble()
+
+anim-jump()
+  @keyframes jump
+    0%
+      transform translatey(-20%)
+    50%
+      transform translatey(0%)
+    100%
+      transform translatey(-20%)
+  animation jump 1s cubic-bezier(.65,-0.86,.69,.64) infinite
+  animation-fill-mode backwards
+
+
+
+
+// specific mixin for project
+
+hero()
+    min-height 55rem
+    height calc(100vh - 18rem)
+    max-height 100rem - 8rem
+    will-change transform
+
+heroTablet()
+    min-height 45rem
+    height calc(100vh - 18rem)
+    max-height 90rem - 8rem
+    will-change transform

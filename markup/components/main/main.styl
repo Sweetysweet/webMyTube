@@ -1,0 +1,198 @@
+mixinmain()
+$width = '(max-width: 576px)'
+  .wrapper
+    display flex
+    .sidebarMenu
+      display flex 
+      flex-direction column
+      height 100%
+      position relative
+      left 0
+      width 27rem
+      transition transform 250ms ease-in-out
+      z-index 666
+      ul
+       margin 0
+       padding 0
+       border-top 1px solid rgba(255, 255, 255, 0.10)
+       li 
+        list-style none
+        padding 0 24px
+        height 40px
+
+        a
+          height 100%
+          display flex
+          justify-content left
+          align-items center
+          text-decoration none
+          cursor pointer
+
+        &:hover
+          background rgba(0, 0, 0, 0.05)
+
+        svg
+          display block
+          width 24px
+          height 24px
+          margin-right 24px
+          fill #606060
+
+        span 
+          color black
+          cursor pointer
+          text-decoration none
+          font-size 1.4rem
+          font-weight 500
+          line-height 1.8rem
+        &.active 
+          background rgba(0, 0, 0, 0.1)
+
+          svg 
+            fill red
+      @media $width
+        @import menu
+      &.rollUp
+        @import menu
+    .yt
+      min-width 32.5rem  
+      max-width 32.5rem 
+      margin 0 1.6rem 4rem 0
+      cursor pointer 
+
+      @media $width
+        min-width 25rem
+        margin 0 
+
+      &-thumbnail
+        &__img
+          object-fit cover
+          width 100%
+      &-tittle
+        width 100%
+      font-size 1.6rem
+        font-weight 500
+        color rgb(13, 13, 13) 
+      &-channel 
+        text-overflow ellipsis 
+        overflow hidden 
+        white-space nowrap
+        font-size 1.4rem
+        color rgb(96, 96, 96)
+  .container
+    width 100%
+    padding 1rem 3rem
+    background-color #f9f9f9
+
+    @media $width
+      padding 1rem
+
+    #next_result
+      display block
+      margin 0 auto
+      padding 1rem 3rem
+      font-size 1.4rem
+      background-color red
+      color white
+      border 1px solud transparent
+      cursor pointer
+
+      &:hover
+        color red
+        background-color white
+        border 1px solid red
+
+      &:active
+        color white
+        background-color red  
+        border 1px solid transparent
+  .row
+    display flex
+    flex-wrap wrap  
+    justify-content center
+
+  .keyboard
+    position absolute
+    top -50%
+    left 50%
+    margin-right -50%
+    transform translate(-50%, -50%)
+    height auto
+    padding 10px
+    background-color white
+    border 1px solid rgba(0, 0, 0, 0.3)
+    z-index 2147483644
+    font-family arial, sans-serif
+    font-size 14px
+    box-shadow 0 4px 16px rgba(0, 0, 0, 0.2)
+    transition top 0.5s
+
+    @media $width
+      display none
+
+    .keyboard-wrapper,
+    .keyboard-wrapper:focus
+      outine-color transparent
+  table
+    width 100%
+    padding 0
+    border-spacing 0
+
+  [style*="--aspect-ratio"]> :first-child 
+    width 100%
+
+  [style*="--aspect-ratio"]>img 
+    height auto 
+
+  @supports (--custom:property)
+    [style*="--aspect-ratio"] 
+      position relative
+    [style*="--aspect-ratio"]::before 
+    content ""
+    display block
+    padding-bottom calc(100% / (var(--aspect-ratio)))
+  
+
+    [style*="--aspect-ratio"]> :first-child 
+      position absolute
+      top 0
+      left 0
+      height 100% 
+
+  .auth
+    position fixed
+    display flex
+    top 0
+    bottom 0
+    width 100%
+    height 100%
+    z-index 999
+    background-color rgba(black, 0.8)
+
+    &_wrap
+      display flex
+      margin auto
+      width 300px
+      height 200px
+      background-color rgba(black, 0.5)
+
+      #authorize
+        margin auto
+        padding 20px 60px
+        font-size 22px
+        font-weight bold
+        background-color red
+        color white
+        border transparent
+        cursor pointer
+        &:hover 
+          color red
+          background-color white
+          border red solid
+        &:active 
+          color white
+          background-color red  
+          border white solid  
+
+
+mixinmain()

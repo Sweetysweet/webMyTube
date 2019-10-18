@@ -1,0 +1,32 @@
+mixin description(caption, content)
+
+    section.description
+      h2.tittle favorable
+      .line
+
+      .image__show__wrapper
+        .wrapper__first
+          .image__first
+            img(src="%=static=%/img/content/first.jpg" alt="")
+          .content
+            h4.image-caption= caption
+            span.image-content= content
+          .image__second
+            img(src="%=static=%/img/content/third.jpg" alt="")
+          .content
+            h4.image-caption= caption
+            span.image-content= content
+        .wrapper__second
+          .image__third
+            img(src="%=static=%/img/content/second.jpg" alt="")
+          .content  
+            h4.image-caption= caption
+            span.image-content= content
+          .image__fourth
+            img(src="%=static=%/img/content/fourth.jpg" alt="")
+          .content  
+            h4.image-caption= caption
+            span.image-content= content
+
+
+        

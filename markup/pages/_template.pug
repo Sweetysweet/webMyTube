@@ -1,0 +1,18 @@
+//- pageTitle: Новая страница
+//- pageCategory: Страницы
+//- date: 12.12.2018
+//- status: wait
+
+extends ../layouts/layout.pug
+
+append vars
+  -
+    setDefs({
+      pageTitle: 'Новая страница',
+      menuActiveIndex: -1
+    })
+
+
+block content
+  +section()
+    h1!= DEFS.pageTitle

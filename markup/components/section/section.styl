@@ -1,0 +1,33 @@
+mixinSection()
+
+  .section
+    &:not(:last-child)
+      margin-bottom 4rem
+
+
+
+  .container
+    position relative
+    padding $indent-mobile
+    height inherit
+
+
+  @media $desktop
+   .section
+      &:not(:last-child)
+        margin-bottom 8rem
+
+    .container
+      margin 0 auto
+      padding $indent-desktop
+      width $containerWidth
+
+  @media $xl
+    .section
+      .container
+        padding $indent-xl
+
+
+
+
+mixinSection()

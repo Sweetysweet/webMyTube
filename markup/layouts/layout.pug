@@ -1,0 +1,60 @@
+include _head.pug
+include _components.pug
+include _constants.pug
+
+block vars
+  //- Global defaults in '/layout/_constants.pug'
+  //-
+  //-
+  //- example
+  //- -
+  //-   DEFS.pageTitle = 'Главная';
+
+
+doctype html
+html.no-js(lang='ru')
+  head
+    block head
+      +head()
+
+
+  body.page(class=DEFS.pageClass)
+    |%=symbols=%
+
+
+    .page__header
+      block header
+        +header()
+
+    main.page__content
+      block content
+        div hello
+        //- content here
+
+    //- +popup()
+      block popup
+
+    block footer
+      .page__footer
+        +footer()
+
+    +debug()
+
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    - if (TARS_ENV === 'stage')
+      script(src='%=static=%js/separate-js/api-config.stage.js?v=' + Date.now())
+    - else
+      script(src='%=static=%js/separate-js/api-config.js?v=' + Date.now())
+
+    script(src='%=static=%js/separate-js/custom.js?v=' + Date.now())
+
+    script(src='%=static=%js/vendor%=min=%.js?v=' + Date.now())
+
+    |<!--[if lt IE 11]><script src="%=static=%js/legacy%=min=%.js" type="text/javascript"></script><![endif]-->
+    script(src='%=static=%js/main%=hash=%%=min=%.js?v=' + Date.now())
+
+
+    block script
