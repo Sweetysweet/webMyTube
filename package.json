@@ -9,7 +9,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/runtime": "^7.1.2",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-loader": "^8.0.4",
     "object-fit-images": "^3.2.4",
     "stickyfilljs": "^2.1.0",
