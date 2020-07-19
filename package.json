@@ -34,7 +34,7 @@
     "pug-plain-loader": "^1.0.0",
     "vue-loader": "^15.4.2",
     "vue-template-compiler": "^2.5.17",
-    "webpack-bundle-analyzer": "^3.0.3"
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "scripts": {
     "dev": "tars dev -l",
